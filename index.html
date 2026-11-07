@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dasbor Daftar Tugas Kehidupan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="dashboard">
+    <header class="card greeting">
+      <button id="theme-toggle" class="icon-btn" aria-label="Ganti mode terang/gelap">🌙</button>
+      <div id="clock" class="clock">00:00:00</div>
+      <div id="date" class="date"></div>
+      <h1 id="greeting-text">Selamat Pagi</h1>
+      <button id="edit-name" class="link-btn">Atur nama</button>
+    </header>
+
+    <section class="card">
+      <h2>Pengatur Waktu Fokus</h2>
+      <div id="timer-display" class="timer">25:00</div>
+      <div class="row center">
+        <button id="timer-start" class="btn primary">Mulai</button>
+        <button id="timer-stop" class="btn">Berhenti</button>
+        <button id="timer-reset" class="btn">Atur Ulang</button>
+      </div>
+      <div class="row center minutes">
+        <label for="timer-minutes">Durasi (menit)</label>
+        <input id="timer-minutes" type="number" min="1" max="180" value="25">
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Tugas</h2>
+      <form id="task-form" class="row">
+        <input id="task-input" type="text" placeholder="Tambah tugas baru..." autocomplete="off" required>
+        <button class="btn primary" type="submit">Tambah</button>
+      </form>
+      <p id="task-error" class="error" hidden></p>
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+
+    <section class="card links">
+      <h2>Tautan Cepat</h2>
+      <form id="link-form" class="row">
+        <input id="link-name" type="text" placeholder="Nama tautan" required>
+        <input id="link-url" type="text" placeholder="URL" required>
+        <button class="btn primary" type="submit">Tambah Tautan</button>
+      </form>
+      <div id="link-list" class="link-list"></div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
